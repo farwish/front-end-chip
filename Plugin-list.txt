@@ -23,4 +23,15 @@
 	http://code.ciaoca.com/jquery/cxcolor/demo/
 	https://github.com/ciaoca/cxColor/
 	
+【screenfull】
+	fullscreenAPI
+	http://www.paulund.co.uk/javascript-full-screen-api
+	http://www.bootcdn.cn/screenfull.js/
+	simple useage:
+		var target = $('#target')[0]; // Get DOM element from jQuery collection
+		$('#button').click(function() {
+		    if ( screenfull ) {
+		        screenfull.request( target );
+		    }
+		});
 	
