@@ -3,6 +3,10 @@
 	https://github.com/posabsolute/jQuery-Validation-Engine
 	(Chinese)http://code.ciaoca.com/jquery/validation_engine/
 	
+【validform】
+	http://validform.rjboy.cn/
+	（可以尝试下）
+	
 【progress bar】
 	pace
 	https://github.com/HubSpot/pace
