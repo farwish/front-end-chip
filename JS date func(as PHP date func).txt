@@ -127,6 +127,7 @@ function date(format, timestamp){
 /*
 Useage:
 
-var time = '1434021613';
-var formatTime = date('Y-m-d H:i:s', time);
+var jstime = String(Date.parse(new Date()));  
+var phptime = jstime.substring(0, 10);
+var datetime = date('Y-m-d H:i:s', phptime);
 */
