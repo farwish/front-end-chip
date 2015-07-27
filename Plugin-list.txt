@@ -1,13 +1,13 @@
-【validate】
+【validate】表单验证
 	jQuery-Validation-Engine
 	https://github.com/posabsolute/jQuery-Validation-Engine
 	(Chinese)http://code.ciaoca.com/jquery/validation_engine/
 	
-【validform】
+【validform】表单验证
 	http://validform.rjboy.cn/
 	（可以尝试下）
 	
-【progress bar】
+【progress bar】进度条
 	pace
 	https://github.com/HubSpot/pace
 
@@ -17,17 +17,17 @@
 	nprogress
 	https://github.com/rstacruz/nprogress
 
-【date time picker】
+【date time picker】日期选择
 	layDate
 	http://sentsin.com/layui/laydate/
 	(http://www.jq22.com/jquery-info1059)
 	
-【color picker】
+【color picker】颜色选择
 	cxcolor
 	http://code.ciaoca.com/jquery/cxcolor/demo/
 	https://github.com/ciaoca/cxColor/
 	
-【screenfull】
+【screenfull】全屏
 	fullscreenAPI
 	http://www.paulund.co.uk/javascript-full-screen-api
 	http://www.bootcdn.cn/screenfull.js/
@@ -39,3 +39,7 @@
 		    }
 		});
 	
+【artDialog】对话框
+	https://github.com/aui/artDialog
+	usage:
+		http://aui.github.io/artDialog/doc/index.html#module
