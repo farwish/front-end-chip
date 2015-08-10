@@ -1,3 +1,4 @@
+jQuery CDN ：http://code.jquery.com/
 jQuery API 1.11.2 速查表 ：http://www.fastgo8.com/index.html
 
 【validate】表单验证
@@ -49,3 +50,6 @@ jQuery API 1.11.2 速查表 ：http://www.fastgo8.com/index.html
 【zTree】树插件
 	https://github.com/zTree/zTree_v3
 	http://www.ztree.me/v3/api.php
+
+【pjax】pushState + ajax
+	https://github.com/defunkt/jquery-pjax
