@@ -1,16 +1,16 @@
-jQuery CDN ：http://code.jquery.com/
-jQuery API 1.11.2 速查表 ：http://www.fastgo8.com/index.html
+> jQuery CDN ：http://code.jquery.com/
+> jQuery API 1.11.2 速查表 ：http://www.fastgo8.com/index.html
 
-【validate】表单验证
-	jQuery-Validation-Engine
-	https://github.com/posabsolute/jQuery-Validation-Engine
-	(Chinese)http://code.ciaoca.com/jquery/validation_engine/
+* 【validate】表单验证
+	> jQuery-Validation-Engine
+	> https://github.com/posabsolute/jQuery-Validation-Engine
+	> (Chinese)http://code.ciaoca.com/jquery/validation_engine/
 	
-【validform】表单验证
+* 【validform】表单验证
 	http://validform.rjboy.cn/
 	（可以尝试下）
 	
-【progress bar】进度条
+* 【progress bar】进度条
 	pace
 	https://github.com/HubSpot/pace
 
@@ -20,17 +20,17 @@ jQuery API 1.11.2 速查表 ：http://www.fastgo8.com/index.html
 	nprogress
 	https://github.com/rstacruz/nprogress
 
-【date time picker】日期选择
+* 【date time picker】日期选择
 	layDate
 	http://sentsin.com/layui/laydate/
 	(http://www.jq22.com/jquery-info1059)
 	
-【color picker】颜色选择
+* 【color picker】颜色选择
 	cxcolor
 	http://code.ciaoca.com/jquery/cxcolor/demo/
 	https://github.com/ciaoca/cxColor/
 	
-【screenfull】全屏
+* 【screenfull】全屏
 	fullscreenAPI
 	http://www.paulund.co.uk/javascript-full-screen-api
 	http://www.bootcdn.cn/screenfull.js/
@@ -42,14 +42,21 @@ jQuery API 1.11.2 速查表 ：http://www.fastgo8.com/index.html
 		    }
 		});
 	
-【artDialog】对话框
+* 【artDialog】对话框
 	https://github.com/aui/artDialog
 	usage:
 		http://aui.github.io/artDialog/doc/index.html#module
 
-【zTree】树插件
+* 【zTree】树插件
 	https://github.com/zTree/zTree_v3
 	http://www.ztree.me/v3/api.php
 
-【pjax】pushState + ajax
+* 【pjax】pushState + ajax
 	https://github.com/defunkt/jquery-pjax
+
+* 【lodop】Web打印控件
+	http://www.lodop.net/demo.html
+	文章: http://www.tuicool.com/articles/juMFje3
+	
+* 【shouji】手机号码归属地接口
+	http://v.showji.com/Locating/showji.com20150416273007.aspx?m=15159384949&output=json&callback=querycallback&timestamp=1441607057815
