@@ -70,3 +70,12 @@ jQuery API 1.11.2 速查表 ：http://www.fastgo8.com/index.html
 	
 【shouji】手机号码归属地接口
 	http://v.showji.com/Locating/showji.com20150416273007.aspx?m=15159384949&output=json&callback=querycallback&timestamp=1441607057815
+
+
+【lazyLoad】延迟加载
+	https://github.com/tuupola/jquery_lazyload
+	http://www.appelsiini.net/projects/lazyload
+	
+【bLazy】延迟加载
+	https://github.com/dinbror/blazy
+	http://dinbror.dk/blog/blazy/
