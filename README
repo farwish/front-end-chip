@@ -10,6 +10,7 @@ jQuery API 1.11.2 速查表 ：http://www.fastgo8.com/index.html
 	http://validform.rjboy.cn/
 	（可以尝试下）
 	
+	
 【progress bar】进度条
 	pace
 	https://github.com/HubSpot/pace
@@ -20,6 +21,7 @@ jQuery API 1.11.2 速查表 ：http://www.fastgo8.com/index.html
 	nprogress
 	https://github.com/rstacruz/nprogress
 
+
 【date time picker】日期选择
 	layDate
 	http://sentsin.com/layui/laydate/
@@ -29,6 +31,7 @@ jQuery API 1.11.2 速查表 ：http://www.fastgo8.com/index.html
 	cxcolor
 	http://code.ciaoca.com/jquery/cxcolor/demo/
 	https://github.com/ciaoca/cxColor/
+	
 	
 【screenfull】全屏
 	fullscreenAPI
@@ -41,13 +44,19 @@ jQuery API 1.11.2 速查表 ：http://www.fastgo8.com/index.html
 		        screenfull.request( target );
 		    }
 		});
+
 	
 【artDialog】对话框
 	https://github.com/aui/artDialog
 	usage:
 		http://aui.github.io/artDialog/doc/index.html#module
 
-【zTree】树插件
+【bPopup】模态框
+	https://github.com/dinbror/bpopup
+	demo:
+		http://www.dinbror.dk/bpopup/
+
+【zTree】树插件（适用于ajax请求操作）
 	https://github.com/zTree/zTree_v3
 	http://www.ztree.me/v3/api.php
 
