@@ -1,5 +1,5 @@
 jQuery CDN ：http://code.jquery.com/
-jQuery API 1.11.2 速查表 ：http://www.fastgo8.com/index.html
+jQuery API 1.11.2 ：http://www.fastgo8.com/index.html
 
 【validate】表单验证
 	jQuery-Validation-Engine
@@ -9,6 +9,9 @@ jQuery API 1.11.2 速查表 ：http://www.fastgo8.com/index.html
 【validform】表单验证
 	http://validform.rjboy.cn/
 	（可以尝试下）
+
+【ajaxForm】表单插件
+	http://malsup.com/jquery/form/
 	
 	
 【progress bar】进度条
@@ -21,7 +24,6 @@ jQuery API 1.11.2 速查表 ：http://www.fastgo8.com/index.html
 	nprogress
 	https://github.com/rstacruz/nprogress
 
-
 【date time picker】日期选择
 	layDate
 	http://sentsin.com/layui/laydate/
@@ -31,7 +33,6 @@ jQuery API 1.11.2 速查表 ：http://www.fastgo8.com/index.html
 	cxcolor
 	http://code.ciaoca.com/jquery/cxcolor/demo/
 	https://github.com/ciaoca/cxColor/
-	
 	
 【screenfull】全屏
 	fullscreenAPI
@@ -45,7 +46,7 @@ jQuery API 1.11.2 速查表 ：http://www.fastgo8.com/index.html
 		    }
 		});
 
-	
+
 【artDialog】对话框
 	https://github.com/aui/artDialog
 	usage:
@@ -55,6 +56,7 @@ jQuery API 1.11.2 速查表 ：http://www.fastgo8.com/index.html
 	https://github.com/dinbror/bpopup
 	demo:
 		http://www.dinbror.dk/bpopup/
+
 
 【zTree】树插件（适用于ajax请求操作）
 	https://github.com/zTree/zTree_v3
