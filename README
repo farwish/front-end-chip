@@ -8,7 +8,17 @@ jQuery API 1.11.2 ：http://www.fastgo8.com/index.html
 	
 【validform】表单验证
 	http://validform.rjboy.cn/
-	Doc: http://validform.rjboy.cn/document.html#getstart
+	
+	文档：（http://validform.rjboy.cn/document.html#getstart）
+	<form class="form">
+		<input type="text" name="" datatype="*">
+		<input type="submit" value="提交">
+	</form>
+	<script>
+	$(".form").Validform({
+		tiptype:2
+	});
+	</script>
 
 【ajaxForm】表单插件
 	http://malsup.com/jquery/form/
