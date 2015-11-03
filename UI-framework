@@ -4,7 +4,7 @@ bootstrap
 
 semantic-ui：
   http://semantic-ui.com/ 
-  (样式应该是最淡雅的，动画也够强大；但input表单尺寸过大，不太适合中文Web)
+  (样式应该是最淡雅的，动画也够强大)
   
 foundation-ui：
   http://foundation.zurb.com/
@@ -16,8 +16,9 @@ metro-ui
   截至15/11/03，已有3.0版本，看起来又炫了，可以考虑使用。
   
 bootMetro
-  http://aozora.github.io/
-  （基于bootstrap的另一metro风格ui，组件和bootstap丰富，想使用metro风格元素可以尝试使用）
+  http://aozora.github.io/bootmetro/
+  （基于bootstrap的另一metro风格ui，组件和bootstap一样丰富，使用习惯也几近相同，想使用metro风格元素可以尝试使用）
+  （配色可能会简单到清淡，也是一种简洁）
 
 pure-ui
   http://purecss.io/
@@ -27,7 +28,10 @@ alloyui
   http://alloyui.com
   （基于bootstrap，风格几乎和bootstrap一模一样，所以并非首选）
   
-
+H-ui
+  http://www.h-ui.net/
+  （基于bootstrap的修改版ui，可以看作替代版，适合中文Web）
+  H-ui后台模版：http://www.h-ui.net/H-ui.admin.shtml
 
 
 
