@@ -1,7 +1,7 @@
 jQuery CDN ：http://code.jquery.com/
 jQuery API 1.11.2 ：http://www.fastgo8.com/index.html
 
-Userful Front-end Plugin：
+### Userful Front-end Plugin：
 
 【validate】表单验证
 	jQuery-Validation-Engine
@@ -108,4 +108,4 @@ Userful Front-end Plugin：
 	http://echarts.baidu.com/doc/example/pie1.html#
 
 【pagination】jquery分页插件，支持ajax
-	https://github.com/mricle/Mricode.Pagination
+	http://maxiaoxiang.com/plugin/pagination.html
