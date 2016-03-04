@@ -11,18 +11,19 @@ jQuery API 1.11.2 ：http://www.fastgo8.com/index.html
 	
 【validform】表单验证  
 	http://validform.rjboy.cn/  
-	```
-	文档：（http://validform.rjboy.cn/document.html#getstart）  
-	<form class="form">  
-		<input type="text" name="" datatype="*">  
-		<input type="submit" value="提交">  
-	</form>  
-	<script>  
-	$(".form").Validform({  
-		tiptype:2  
-	});  
-	</script>  
-	```
+	
+
+> 文档：（http://validform.rjboy.cn/document.html#getstart）  
+> <form class="form">  
+>	<input type="text" name="" datatype="*">  
+>	<input type="submit" value="提交">  
+> </form>  
+> <script>  
+> $(".form").Validform({  
+> 	tiptype:2  
+> });  
+> </script>  
+
 
 【ajaxForm】表单插件  
 	http://malsup.com/jquery/form/  
@@ -52,15 +53,14 @@ jQuery API 1.11.2 ：http://www.fastgo8.com/index.html
 	fullscreenAPI  
 	http://www.paulund.co.uk/javascript-full-screen-api  
 	http://www.bootcdn.cn/screenfull.js/  
-	```
-	simple useage:  
-		var target = $('#target')[0]; // Get DOM element from jQuery collection  
-		$('#button').click(function() {  
-		    if ( screenfull ) {  
-		        screenfull.request( target );  
-		    }  
-		});  
-	```
+
+> simple useage:  
+> var target = $('#target')[0]; // Get DOM element from jQuery collection  
+> $('#button').click(function() {  
+>    if ( screenfull ) {  
+>        screenfull.request( target );  
+>    }  
+> });  
 
 
 【artDialog】对话框  
