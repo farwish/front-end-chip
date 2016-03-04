@@ -6,21 +6,22 @@ jQuery API 1.11.2 ：http://www.fastgo8.com/index.html
 【validate】表单验证  
 	jQuery-Validation-Engine  
 	https://github.com/posabsolute/jQuery-Validation-Engine  
+	
 	(Chinese)http://code.ciaoca.com/jquery/validation_engine/  
 	
 【validform】表单验证  
 	http://validform.rjboy.cn/  
 	```
-	文档：（http://validform.rjboy.cn/document.html#getstart）
-	<form class="form">
-		<input type="text" name="" datatype="*">
-		<input type="submit" value="提交">
-	</form>
-	<script>
-	$(".form").Validform({
-		tiptype:2
-	});
-	</script>
+	文档：（http://validform.rjboy.cn/document.html#getstart）  
+	<form class="form">  
+		<input type="text" name="" datatype="*">  
+		<input type="submit" value="提交">  
+	</form>  
+	<script>  
+	$(".form").Validform({  
+		tiptype:2  
+	});  
+	</script>  
 	```
 
 【ajaxForm】表单插件  
@@ -53,12 +54,12 @@ jQuery API 1.11.2 ：http://www.fastgo8.com/index.html
 	http://www.bootcdn.cn/screenfull.js/  
 	```
 	simple useage:  
-		var target = $('#target')[0]; // Get DOM element from jQuery collection
-		$('#button').click(function() {
-		    if ( screenfull ) {
-		        screenfull.request( target );
-		    }
-		});
+		var target = $('#target')[0]; // Get DOM element from jQuery collection  
+		$('#button').click(function() {  
+		    if ( screenfull ) {  
+		        screenfull.request( target );  
+		    }  
+		});  
 	```
 
 
