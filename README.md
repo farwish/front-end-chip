@@ -114,9 +114,9 @@ jQuery API 1.11.2 ：http://www.fastgo8.com/index.html
 【pagination】jquery分页插件，支持ajax  
 	http://maxiaoxiang.com/plugin/pagination.html  
 
-【layer】web弹窗/层
-	http://layer.layui.com/
-【layDate】js日期控件
-	http://laydate.layui.com/
-【layPage】js分页组件
-	http://laypage.layui.com/
+【layer】web弹窗/层  
+	http://layer.layui.com/  
+【layDate】js日期控件  
+	http://laydate.layui.com/  
+【layPage】js分页组件  
+	http://laypage.layui.com/  
