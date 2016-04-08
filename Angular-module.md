@@ -15,3 +15,4 @@ https://github.com/danialfarid/ng-file-upload
 
 ### ngDialog  对话框  
 https://github.com/likeastore/ngDialog#ngdialog  
+https://github.com/likeastore/ngDialog/blob/master/example/index.html
