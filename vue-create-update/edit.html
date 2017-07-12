@@ -1,0 +1,355 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <link href="//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/vue/2.3.4/vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+
+    <test-component></test-component>
+
+    <form id="formView" type="GET" @submit.prevent="onSubmit">
+
+        <select v-model="source_id" @change="showPackage">
+            <option disabled value="0">- 选择 -</option>
+            <option v-for="item in sources" :value="item.id">{{ item.name }}</option>
+        </select>
+
+        <div v-for="(obj, idx) in section">
+            <select v-model="obj.package_id" @change="showMaterial(idx)">
+                <option disabled value="0">- 选择 -</option>
+                <option v-for="item in obj.packages" :value="item.id">{{ item.name }}</option>
+            </select>
+
+            <div v-for="item in obj.materials">
+                <span>{{ item.name }}</span> <input type="text" placeholder="不填留空" v-model="item.upgrade_price">
+            </div>
+        </div>
+
+        <div>
+            <a class="btn btn-default" href="javascript:;" @click="appendSelection" v-show="canAppendSelection">添加</a>
+            <button class="btn btn-success" type="submit">创建</button>
+        </div>
+
+    </form>
+
+</div>
+</body>
+<script>
+
+    // 模拟一级数据
+    var sources = [
+        {
+            "id": 1,
+            "name": "a"
+        },
+        {
+            "id": 2,
+            "name": "b"
+        }
+    ];
+
+    // 模拟二级数据
+    var packages_1 = [
+        {
+            "id": 1,
+            "name": "aa_1"
+        },
+        {
+            "id": 2,
+            "name": "aa_2"
+        },
+        {
+            "id": 3,
+            "name": "aa_3"
+        }
+    ];
+
+    var packages_2 = [
+        {
+            "id": 1,
+            "name": "bb_1"
+        },
+        {
+            "id": 2,
+            "name": "bb_2"
+        }
+    ];
+
+    // 三级数据，情况1
+    var materials_1 = [
+        {
+            "id": 1,
+            "name": "加石油",
+            "upgrade_price": ""
+        },
+        {
+            "id": 2,
+            "name": "纳克",
+            "upgrade_price": ""
+        }
+    ];
+
+    // 三级数据，情况2
+    var materials_2 = [
+        {
+            "id": 2,
+            "name": "纳克_",
+            "upgrade_price": ""
+        },
+        {
+            "id": 3,
+            "name": "黄喜力",
+            "upgrade_price": ""
+        },
+        {
+            "id": 4,
+            "name": "蓝喜力",
+            "upgrade_price": ""
+        }
+    ];
+
+    var materials_3 = [
+        {
+            "id": 5,
+            "name": "银喜力",
+            "upgrade_price": ""
+        },
+        {
+            "id": 6,
+            "name": "金喜力",
+            "upgrade_price": ""
+        }
+    ];
+
+    // 根实例
+    var app = new Vue({
+        el: '#app',
+        data: {
+            // select 设置 v-model 后默认选中值为0的
+            source_id: 0,
+            sources: sources,
+            canAppendSelection: false,  // 是否显示添加按钮
+            appendClickTimes: 0,        // 添加按钮点击次数
+            section: [
+                {
+                    // select 设置 v-model 后默认选中值为0的
+                    package_id: 0,
+                    packages: [],
+                    materials: []
+                }
+            ]
+        },
+        // 事件方法
+        methods: {
+            // 一级请求二级数据
+            showPackage: function () {
+
+                // 选中的一级id
+                var source_id = this.source_id;
+
+                // 先重置二级数据和三级数据，隐藏添加按钮
+                this.section[0].package_id = 0;
+                this.section[0].packages = [];
+
+                this.section[0].materials = [];
+
+                this.canAppendSelection = false;
+                this.appendClickTimes = 0;
+
+                this.section = [this.section[0]]; // 只留一个二级成员
+
+                // 请求数据
+                var ajaxData = [];
+
+                // 模拟选中不同一级，展示不同二级数据
+                switch (source_id) {
+                    case 1:
+                        ajaxData = packages_1;
+                        break;
+
+                    case 2:
+                        ajaxData = packages_2;
+                        break;
+
+                    default:
+                        break;
+                }
+
+                // 统一绑定
+                this.section[0].packages = ajaxData;
+
+                if (this.section[0].packages.length > 1) {
+                    this.canAppendSelection = true;
+                }
+            },
+
+            // 二级请求三级数据
+            showMaterial: function (section_idx) {
+
+                // 存在多个三级数据的情况，根据 package_idx 选择
+
+                // 选中的二级package_id
+                var package_id = this.section[section_idx].package_id;
+
+                var ajaxData = [];
+
+                // 模拟选中不同二级，展示不同三级数据
+                switch (package_id) {
+                    case 1:
+                        ajaxData = materials_1;
+                        break;
+
+                    case 2:
+                        ajaxData = materials_2;
+                        break;
+
+                    case 3:
+                        ajaxData = materials_3;
+                        break;
+
+                    default:
+                        break;
+                }
+
+                // 这种方式数据是联动的，使用 Vue.set() 替代
+                //this.section[section_idx].materials = ajaxData;
+
+                Vue.set(this.section, section_idx, {
+                    package_id: package_id,
+                    packages: this.section[section_idx].packages,
+                    materials: ajaxData
+                });
+            },
+
+            // 添加二级和隐含的三级
+            appendSelection: function () {
+
+                if (! this.section[0].package_id) {
+                    return alert('请选择packge!');
+                }
+
+                this.appendClickTimes++;
+
+                // 最多能有三级 length 个，隐藏添加按钮
+                if (this.section[0].packages.length - 1 <= this.appendClickTimes ) {
+                    this.canAppendSelection = false;
+                }
+
+                // 也可以使用 Vue.set(this.section, this.section.length, {});
+                // 避免后面更新时同一数据源引起联动，对象不能直接使用 this.section[0]，重新赋值
+                this.section.push({
+                    package_id: this.section[0].package_id,
+                    packages: this.section[0].packages,
+                    materials: this.section[0].materials
+                });
+            },
+
+            // 提交数据
+            onSubmit: function () {
+
+                // 没有选择 source 和 package
+                if (! this.source_id ||
+                    ! this.section[0].package_id
+                ) {
+                    return alert('请选择!');
+                }
+
+                for (var i in this.section) {
+                    delete this.section[i].packages;
+                }
+
+                // 提交数据
+                var form_data = {
+                    source_id: this.source_id,
+                    section: this.section,
+                };
+
+                console.log(form_data);
+
+            }
+        }
+    });
+
+    // =====================  与创建页面的区别仅在如下程序：数据展示及选中 =====================
+
+    // 服务端返回的已选数据
+    var server_data = {
+        "source_id":2,
+        "section":[
+            {
+                "package_id":1,
+                "materials":[
+                    {
+                        "id":1,
+                        "name":"JiaShiYou",
+                        "upgrade_price":11
+                    },
+                    {
+                        "id":2,
+                        "name":"NaKe",
+                        "upgrade_price":22
+                    }
+                ]
+            },
+            {
+                "package_id":2,
+                "materials":[
+                    {
+                        "id":3,
+                        "name": "HuangXiLi",
+                        "upgrade_price":333
+                    },
+                    {
+                        "id":4,
+                        "name":"LanXiLi",
+                        "upgrade_price":444
+                    }
+                ]
+            }
+        ]
+    };
+
+    // 选中一级
+    app.source_id = server_data.source_id;
+
+    // 编辑时不再修改来源
+    for (var i in app.sources)
+    {
+        if (app.sources[i].id != app.source_id) {
+            app.sources.splice(i, 1);
+        }
+    }
+
+    // 展示二级
+    app.showPackage();
+
+    var server_data_section = server_data.section;
+
+    // 重演package操作过程
+    for (var i in server_data_section)
+    {
+        if (! app.section[i])
+        {
+            // 有多个二级时，模拟点击添加按钮
+            app.appendSelection();
+        }
+
+        // 选中package后带出material
+        app.section[i].package_id = server_data_section[i].package_id;
+        app.showMaterial(i);
+
+        // 填充material价格
+        for (var j in app.section[i].materials)
+        {
+            if (server_data_section[i].materials[j]) {
+                // 有设置过价格数据进行填充
+                app.section[i].materials[j].upgrade_price = server_data_section[i].materials[j].upgrade_price;
+            }
+        }
+    }
+
+</script>
+</html>
