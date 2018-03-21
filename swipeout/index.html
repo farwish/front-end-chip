@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SwipeOut</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <link href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      /* delete button */
+
+      .swipe-out .delete-btn {
+        padding: 6px 8px;
+
+        display: inline-block;
+        font-weight: 400;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        border: 1px solid transparent;
+        padding: .375rem .75rem;
+        font-size: 1rem;
+        line-height: 1.5;
+        border-radius: .25rem;
+        transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+
+        color: #fff;
+        background-color: #dc3545;
+        border-color: #dc3545;
+      }
+
+      /* nicer list */
+
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        line-height: 1.2;
+        /* keep text size on orientation change */
+        -webkit-text-size-adjust: 100%;
+      }
+
+      ul {
+        margin: 0;
+        padding: 0;
+      }
+
+      li {
+        border-bottom: solid 1px rgb(224,224,224);
+        padding: 20px;
+      }
+
+      /* email client */
+
+      li {
+        padding: 0px 25px 5px 33px;
+      }
+
+      h1 {
+        font-size: 18px;
+      }
+
+      h1, li p {
+        margin: 0;
+      }
+
+      .muted {
+        color: rgb(128,128,128);
+        font-size: 13px;
+      }
+
+      .date {
+        float: right;
+        color: rgb(29,109,220);
+        margin-top: 4px;
+      }
+
+      /* events */
+
+      #events {
+        padding: 10px;
+        text-align: center;
+        color: #666;
+        background-color: #ccc;
+      }
+
+      #events.delete {
+        color: #b94a48;
+        background-color: #f2dede;
+      }
+
+      #events.click {
+        color: #468847;
+        background-color: #dff0d8;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="events">Play around with the list!</div>
+
+    <ul class="player">
+      <li>
+        <div class="date">Today</div>
+        <h1>Jon Kabat-Zinn</h1>
+        <p>You cannot stop the waves</p>
+        <p class="muted">but you can learn to surf ~~~~~~~~~~~~~~~~~~~</p>
+      </li>
+      <li>
+        <div class="date">Today</div>
+        <h1>John McCarthy</h1>
+        <p>Surfing is the most blissful</p>
+        <p class="muted">experience you can have on this planet, a taste of heaven</p>
+      </li>
+      <li>
+        <div class="date">Yesterday</div>
+        <h1>Duke Kahanamoku</h1>
+        <p>Out of water, I am nothing</p>
+        <p class="muted">The best surfer out there is the one having the most fun</p>
+      </li>
+      <li>
+        <div class="date">Friday</div>
+        <h1>Matt Warshaw</h1>
+        <p>Surfing expresses...</p>
+        <p class="muted">a pure yearning for visceral, physical contact with the natural world</p>
+      </li>
+      <li>
+        <div class="date">Thursday</div>
+        <h1>Kelly Slater</h1>
+        <p>It's like the mafia</p>
+        <p class="muted">Once you're in, you're in. There's no getting out.</p>
+      </li>
+    </ul>
+
+    <!-- swipeout and dependencies -->
+    <script src="./hammer.min.js"></script>
+    <script src="./swipeout.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- your custom code to handle events -->
+    <script>
+      var square = document.querySelector('ul');
+      new SwipeOut(square);
+
+      $("ul").on("delete", "li", function(e) {
+        console.log(e)
+      });
+    </script>
+  </body>
+</html>
+
