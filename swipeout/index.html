@@ -145,7 +145,7 @@
       new SwipeOut(square);
 
       $("ul").on("delete", "li", function(e) {
-        console.log(e)
+        console.log($(this).find('h1').text())
       });
     </script>
   </body>
