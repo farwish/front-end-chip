@@ -144,7 +144,7 @@
       var square = document.querySelector('ul');
       new SwipeOut(square);
 
-      $("ul").on("delete", "li", function(e) {
+      $("li").off('delete').on('delete', function(e) {
         console.log($(this).find('h1').text())
       });
     </script>
